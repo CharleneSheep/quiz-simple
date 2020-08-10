@@ -6,7 +6,27 @@
  * @returns {number} 返回和
  */
 const getSumOfTriple = (arr, start, end) => {
-  // 请实现……
+  // 3的倍数的数字之和
+  let sum = 0
+  for(let i  = 0; i < arr.length; i++){
+    if(arr[i] % 3 == 0){
+      sum += arr[i]
+    }
+  }
+  return sum 
+  
+  // 排序数组(冒泡排序)
+  let temp = null 
+  for(let i = 0; i < arr.length; i++){
+    for(let j = 0; j < arr.length - 1 - i; j++){
+      if(arr[j] > arr[j+1]){
+        temp = arr[j]
+        arr[j] = arr[j+1]
+        arr[j+1] = temp
+      }
+    }
+  }
+  return arr
 };
 
 // * ---------------- 实现的效果：
